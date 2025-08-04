@@ -55,9 +55,11 @@ Here is a sample CSV record:
                     new BufferedWriter(new OutputStreamWriter(out));
 
             // Finally can write the file LOL!
-
-
-
+            for(String a : lines)
+            {
+                writer.write(a, 0, a.length());
+                writer.newLine();
+            }
             writer.close(); // must close the file to seal it and flush buffer
             System.out.println("Data file written!");
         }
